@@ -1,0 +1,94 @@
+<!DOCTYPE>
+<html>
+
+<head>
+	<title>lab keryv vmistom storinky</title>
+	<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+	<meta name="generator" content="Geany 1.29" />
+	
+	<script src = "https://code.jquery.com/jquery.min.js">
+	</script>
+	<script src = "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js">
+	</script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+	
+
+</head>
+
+<body>
+	<navrole="navigation"class="navbar navbar-default">
+		<!--Brand and toggle get grouped for better mobile display-->
+		<div class="navbar-header">
+			<button type="button"data-target="#navbarCollapse"data-toggle="collapse"class="navbar-toggle">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar">
+				</span><span class="icon-bar">
+				</span><span class="icon-bar">
+				</span>
+			</button><a href="#"class="navbar-brand">Бренд</a>
+			</div>
+		<!--Collection of nav links, forms, and other content fortoggling-->
+		<div id="navbarCollapse"class="collapse navbar-collapse">
+			<ul class="nav navbar-nav">
+				<li class="active"><a href="#">Підключення до іншої лаб</a>
+				</li>
+				<li><a href="#">Статті</a>
+				</li>
+				<li>
+					<a href="#">Новини</a>
+					</li></ul><ul class="nav navbar-nav navbar-right"><li>
+						<a href="#">Вхід</a></li></ul>
+						</div>
+						</nav>
+						
+		<a href="#" class="btn btn-primary">Відкрити вікно</a>
+		<div id="myModal" class="modal fade" style="display: none;" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <!-- Заголовок модального окна -->
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">х</button>
+        <h4 class="modal-title">Заголовок модального вікна</h4>
+      </div>
+      <!-- Основний вміст модального вікна -->
+      <div class="modal-body">
+		  <table>
+			  <tr><td>
+		  Група</td><td>
+        <input id = "surname" type="text" size="40"></td></tr>
+			  <tr><td>
+		  Назва дисципліни</td><td>
+        <input type="text" size="40"></td></tr>
+        			  <tr><td>
+		  Кількість пропущених год за тиждень</td><td>
+        <input type="text" size="40"></td></tr>
+        </table>
+      </div>
+      <!-- Футер модального вікна -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Закрити</button>
+        <button type="button" class="btn btn-primary">Зберегти зміни</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+$(document).ready(function(){
+  //при натисканні на любу кнопку, що має клас .btn
+  $(".btn").click(function() {
+    //відкрити модальне вікно з id="myModal"
+    $("#myModal").modal('show');
+  });
+  $(".btn-primary").click(function(){
+	let name = document.getElementById("surname").value;
+	console.log(name);
+	});
+});
+</script>
+
+
+</body>
+
+</html>
