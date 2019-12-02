@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>lab'dodat chysla,move text'</title>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <style>
+    #draggable { width: 200px; height: 50px; padding: 1.5em; }
+  </style>
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+    $( function() {
+      $( "#draggable" ).draggable();
+    } );
+    function a (){document.getElementById("draggable").style.color = "purple";}
+  </script>
+  <script>
+    function onclicks() {
+      var n1= $ ('#num1').val();
+      var n2=$('#num2').val();
+      $.ajax({
+        type: 'POST',
+        url : 'http://kib.tk.te.ua/a1.php',
+        data : 'num1=' +n1+ '&num2=' + n2,
+        success: function(data){
+          $('.results').html(data);
+        }});}
+</script>
+    </head>
+<body>
+
+
+<div id="draggable" class="ui-widget-content" onclick = a()>
+ 
+
+ <p><h1> MOVE ME </h1></p>
+ 
+</div>
+
+
+numl =<input type="text" id="num1"></input><br>
+num2 =<input type="text" id="num2"></input><br>
+<input type="button" value="Click" onClick="onclicks()">
+<div class= "results"></div>
+
+
+
+</body>
+</html>
